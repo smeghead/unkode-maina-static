@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>[Ruby] すごく…禁則事項です…-ウンコード・マニア</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="「なんだこの糞コードは!(怒)」「書いた奴出てこい!(怒)」 こんな声を聞いたり、叫んだりしたことはありませんか？ ウンコードについて学ぶことによってウンコードを撲滅しましょう！ とりあえず、趣のあるウンコード鑑賞から始めて下さい">
+    <meta name="keywords" content="プログラミング,プログラマ,ウンコード,クソース,糞コード,unkode,uncode">
+    <meta name="author" content="smeghead">
+                  
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="ウンコード・マニア" href="https://unkode-mania.net/rss" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../img/unkode32.png" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../favicon.ico">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4VEMNV1D0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-B4VEMNV1D0');
+    </script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33744676-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script data-ad-client="ca-pub-6994803411870749" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="../js/jquery-1.7.2.min.js"></script>
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=139930182876459";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>   </div>
+    <input type="hidden" id="mobile" value="" />
+    <script>
+      var screen_name = '';
+    </script>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="https://unkode-mania.net/">ウンコード・マニア</a>
+          <div class="btn-group pull-right">
+            
+              <a class="btn dropdown-toggle" data-toggle="dropdown" href="53a178ebe41bfefd61000001.html#">
+                <i class="icon-user"></i> ゲスト
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="https://unkode-mania.net/auth">Twitterでサインイン</a></li>
+              </ul>
+            
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a href="https://unkode-mania.net/">ホーム</a></li>
+              <li ><a href="https://unkode-mania.net/about">ウンコード・マニアについて</a></li>
+              <li><a href="mailto:smeghead7+unkode@gmail.com">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li data-url_match="^/$"><a href="https://unkode-mania.net/"><i class="icon-home"></i>ホーム</a></li>
+              <li data-url_match="^/ranking$"><a href="https://unkode-mania.net/ranking"><i class="icon-flag"></i>職人ランキング</a></li>
+            </ul>
+            <ul class="nav nav-list">
+              <li class="nav-header">ウンコードを鑑賞する</li>
+              <li data-url_match="/legend"><a href="https://unkode-mania.net/legend"><i class="icon-film"></i>殿堂入りウンコード</a></li>
+              <li data-url_match="/hot"><a href="https://unkode-mania.net/hot"><i class="icon-thumbs-up"></i>人気ウンコード</a></li>
+              <li data-url_match="/new$"><a href="https://unkode-mania.net/new"><i class="icon-envelope"></i>新着ウンコード</a></li>
+              <li data-url_match="/new_comments"><a href="https://unkode-mania.net/new_comments"><i class="icon-envelope"></i>新着コメント</a></li>
+              <li data-url_match="/search"><a href="https://unkode-mania.net/search"><i class="icon-search"></i>サイト内検索</a></li>
+                <li data-url_match="/lang/C$"><a href="https://unkode-mania.net/lang/C"><i class="icon-list-alt"></i>C(85)</a></li>
+                <li data-url_match="/lang/Java$"><a href="https://unkode-mania.net/lang/Java"><i class="icon-list-alt"></i>Java(80)</a></li>
+                <li data-url_match="/lang/PHP$"><a href="https://unkode-mania.net/lang/PHP"><i class="icon-list-alt"></i>PHP(59)</a></li>
+                <li data-url_match="/lang/JavaScript$"><a href="https://unkode-mania.net/lang/JavaScript"><i class="icon-list-alt"></i>JavaScript(55)</a></li>
+                <li data-url_match="/lang/other$"><a href="https://unkode-mania.net/lang/other"><i class="icon-list-alt"></i>その他(44)</a></li>
+                <li data-url_match="/lang/CPP$"><a href="https://unkode-mania.net/lang/CPP"><i class="icon-list-alt"></i>C++(39)</a></li>
+                <li data-url_match="/lang/CS$"><a href="https://unkode-mania.net/lang/CS"><i class="icon-list-alt"></i>C#(35)</a></li>
+                <li data-url_match="/lang/HTML$"><a href="https://unkode-mania.net/lang/HTML"><i class="icon-list-alt"></i>HTML(18)</a></li>
+                <li data-url_match="/lang/Ruby$"><a href="https://unkode-mania.net/lang/Ruby"><i class="icon-list-alt"></i>Ruby(15)</a></li>
+                <li data-url_match="/lang/VB.net$"><a href="https://unkode-mania.net/lang/VB.net"><i class="icon-list-alt"></i>VB.net(13)</a></li>
+                <li data-url_match="/lang/Python$"><a href="https://unkode-mania.net/lang/Python"><i class="icon-list-alt"></i>Python(11)</a></li>
+                <li data-url_match="/lang/VBA$"><a href="https://unkode-mania.net/lang/VBA"><i class="icon-list-alt"></i>VBA(8)</a></li>
+                <li data-url_match="/lang/ObjC$"><a href="https://unkode-mania.net/lang/ObjC"><i class="icon-list-alt"></i>Objective-C(6)</a></li>
+                <li data-url_match="/lang/typescript$"><a href="https://unkode-mania.net/lang/typescript"><i class="icon-list-alt"></i>TypeScript(3)</a></li>
+                <li data-url_match="/lang/Perl$"><a href="https://unkode-mania.net/lang/Perl"><i class="icon-list-alt"></i>Perl(3)</a></li>
+                <li data-url_match="/lang/ActionScript$"><a href="https://unkode-mania.net/lang/ActionScript"><i class="icon-list-alt"></i>ActionScript(1)</a></li>
+                <li data-url_match="/lang/Cobol$"><a href="https://unkode-mania.net/lang/Cobol"><i class="icon-list-alt"></i>Cobol(1)</a></li>
+              <li class="nav-header">ウンコードを書く</li>
+              <li data-url_match="/register"><a class="register-link" href="https://unkode-mania.net/register"><i class="icon-pencil"></i>投稿する</a></li>
+              <li class="nav-header">ウンコード</li>
+              <li data-url_match="^/about$"><a href="https://unkode-mania.net/about"><i class="icon-info-sign"></i>ウンコード・マニアについて</a></li>
+            </ul>
+          </div><!--/.well -->
+
+
+<a class="twitter-timeline" href="https://twitter.com/unkode_mania" data-widget-id="355147085391212544">Tweets by @unkode_mania</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        </div><!--/span-->
+
+        <div class="span9">
+
+                    <div id="code-info" data-id="53a178ebe41bfefd61000001"></div>
+          <script>
+            var smell_json = '[{"line":0,"author":{"user_id":"2522720593","screen_name":"e_do_san"},"id":"550437b4fe54feb157000033"},{"id":"53b76608e41bfe9c5f000001","author":{"user_id":"121073281","screen_name":"kitaindia"},"line":2}]';
+          </script>
+
+          <div class="row-fluid view">
+            <ul class="breadcrumb">
+              <li>
+                <a href="https://unkode-mania.net/">ホーム</a> <span class="divider">/</span>
+              </li>
+              <li>
+                <a href="https://unkode-mania.net/lang/Ruby">Ruby</a>
+                <span class="divider">/</span>
+              </li>
+              <li class="active">
+                <a href="53a178ebe41bfefd61000001.html">すごく…禁則事項です…</a>
+              </li>
+            </ul>
+
+
+            <div class="property">
+              <a href="https://twitter.com/intent/user?screen_name=utsugiriso">
+                utsugiriso
+              </a>
+              2014-06-18 11:32:59
+            </div>
+            <h2 class="title">
+              [Ruby]
+              すごく…禁則事項です…
+              <a href="https://b.hatena.ne.jp/entry/https://unkode-mania.net/view/53a178ebe41bfefd61000001" class="hatena-bookmark-button" data-hatena-bookmark-title="[Ruby] すごく…禁則事項です… - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/53a178ebe41bfefd61000001" data-text="[Ruby] すごく…禁則事項です… - ウンコード・マニア" data-hashtags="unkode"></a>
+            </h2>
+
+            <h3 class="clear">投稿者からのアピールポイント</h3>
+            <div class="markdown"><p>正規表現などというナンジャクなモノは使いません！(白目)</p>
+
+<p>ファイル保存時とかにすごく有効な、これでもかという禁則文字を変換する男前なメソッドです。</p>
+</div>
+            <pre class="prettyprint linenums">  def convert_illegal_characters(string)
+    return &quot;&quot; if string.nil?
+    #string = string.gsub(&quot; &quot;, &quot;_&quot;);
+    #string = string.gsub(&quot;　&quot;, &quot;_&quot;);
+    string = string.gsub(&quot;&#39;&quot;, &quot;’&quot;);
+    string = string.gsub(&#39;&quot;&#39;, &#39;”&#39;);
+    string = string.gsub(&quot;?&quot;, &quot;？&quot;);
+    string = string.gsub(&quot;(&quot;,&quot;（&quot;);
+    string = string.gsub(&quot;)&quot;,&quot;）&quot;);
+    string = string.gsub(&quot;∵&quot;,&quot;_&quot;);
+    string = string.gsub(&quot;┌&quot;,&quot;_&quot;);
+    string = string.gsub(&quot;┘&quot;,&quot;_&quot;);
+    string = string.gsub(&quot;|&quot;,&quot;_&quot;);
+    string = string.gsub(&quot;&amp;&quot;,&quot;_&quot;);
+    string = string.gsub(&quot;/&quot;,&quot;／&quot;);
+    string = string.gsub(&quot;\\&quot;,&quot;＼&quot;);
+    string = string.gsub(&quot;;&quot;, &quot;；&quot;);
+    string = string.gsub(&quot;*&quot;, &quot;＊&quot;);
+    string = string.gsub(&quot;:&quot;, &quot;：&quot;);
+    string = string.gsub(&quot;\r&quot;, &quot;&quot;);
+    string = string.gsub(&quot;\n&quot;, &quot;&quot;);
+    string = string.gsub(&quot;\t&quot;, &quot; &quot;);
+    string = string.gsub(&quot;&lt;&quot;, &quot;＜&quot;);
+    string = string.gsub(&quot;&gt;&quot;, &quot;＞&quot;);
+    return string
+  end</pre>
+            <p class="description">使い方ヒント: 「これは臭う」という行を見付けたら、各行の<img src="../img/nuclear.png" alt="smell" title="臭いアイコン" />をクリックしてマーキングしておきましょう(要Twitter OAuth認証)</p>
+
+          <div class="ad ad-amazon">
+<a href="https://www.amazon.co.jp/%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9-%E4%BD%BF%E3%81%84%E6%96%B9-Vladimir-Khorikov/dp/4839981728?keywords=%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9&qid=1677933953&sr=8-1&linkCode=li2&tag=smeghead-22&linkId=b847943bc8c2808f65e6b16a0d38ccba&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4839981728&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4839981728" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E7%8F%BE%E5%A0%B4%E3%81%A7%E5%BD%B9%E7%AB%8B%E3%81%A4%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E8%A8%AD%E8%A8%88%E3%81%AE%E5%8E%9F%E5%89%87-%E5%A4%89%E6%9B%B4%E3%82%92%E6%A5%BD%E3%81%A7%E5%AE%89%E5%85%A8%E3%81%AB%E3%81%99%E3%82%8B%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%81%AE%E5%AE%9F%E8%B7%B5%E6%8A%80%E6%B3%95-%E5%A2%97%E7%94%B0-%E4%BA%A8/dp/477419087X?keywords=%E7%8F%BE%E5%A0%B4%E3%81%A7%E5%BD%B9%E7%AB%8B%E3%81%A4%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E8%A8%AD%E8%A8%88%E3%81%AE%E5%8E%9F%E5%89%87&qid=1677934081&sprefix=%E7%8F%BE%E5%A0%B4%E3%81%A7%2Caps%2C327&sr=8-1&linkCode=li2&tag=smeghead-22&linkId=de5d4d5fbee5208ab924bc96b1a18cb9&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=477419087X&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=477419087X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E8%89%AF%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89-%E6%82%AA%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A7%E5%AD%A6%E3%81%B6%E8%A8%AD%E8%A8%88%E5%85%A5%E9%96%80-%E2%80%95%E4%BF%9D%E5%AE%88%E3%81%97%E3%82%84%E3%81%99%E3%81%84-%E6%88%90%E9%95%B7%E3%81%97%E7%B6%9A%E3%81%91%E3%82%8B%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9-%E4%BB%99%E5%A1%B2/dp/4297127830?pd_rd_w=vAOIq&content-id=amzn1.sym.918446e7-72f4-48c7-a672-af3b6ace2b19&pf_rd_p=918446e7-72f4-48c7-a672-af3b6ace2b19&pf_rd_r=A8PMS73FFR5MCF1QEVV8&pd_rd_wg=c0VXY&pd_rd_r=7be1889d-92c4-471f-a0fd-68fa78a337af&pd_rd_i=4297127830&psc=1&linkCode=li2&tag=smeghead-22&linkId=f9ef7d2d4144f269731fe0c68333bd98&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4297127830&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4297127830" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/Good-Code-Bad-%EF%BD%9E%E6%8C%81%E7%B6%9A%E5%8F%AF%E8%83%BD%E3%81%AA%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E7%9A%84%E6%80%9D%E8%80%83/dp/4798068160?keywords=%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9&qid=1677933953&sr=8-18&linkCode=li2&tag=smeghead-22&linkId=ec8f84fa8dd945ea9c259bd875bbb8f9&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4798068160&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4798068160" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%BB%E3%83%90%E3%82%A4%E3%83%BB%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3-Dan-Bergh-Johnsson/dp/483997599X?keywords=%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%90%E3%82%A4%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3&qid=1677934293&sprefix=%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%2Caps%2C223&sr=8-1&linkCode=li2&tag=smeghead-22&linkId=c56dc733fc9a1de040e77b1811d2c3e2&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=483997599X&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=483997599X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E3%81%A1%E3%82%87%E3%81%86%E3%81%9C%E3%81%A4%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%AD%E8%A8%88%E5%85%A5%E9%96%80%E2%80%95%E2%80%95PHP%E3%81%A7%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%81%AE%E6%B4%BB%E7%94%A8-%E7%94%B0%E4%B8%AD-%E3%81%B2%E3%81%95%E3%81%A6%E3%82%8B/dp/4297132346?crid=1MZ9RQR460YAL&keywords=%E3%81%A1%E3%82%87%E3%81%86%E3%81%9C%E3%81%A4%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%AD%E8%A8%88%E5%85%A5%E9%96%80&qid=1677934394&sprefix=%E3%81%A1%E3%82%87%E3%81%86%E3%81%9C%E3%81%A4%2Caps%2C217&sr=8-1&linkCode=li2&tag=smeghead-22&linkId=2eddfb4c3f23b4019e5e8c94b0b99f0d&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4297132346&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4297132346" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E6%96%B0%E7%89%88-C%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%BA%E6%96%AD%E5%AE%A4-%E8%97%A4%E5%8E%9F-%E5%8D%9A%E6%96%87/dp/4774117870?&linkCode=li2&tag=smeghead-22&linkId=ad7a413e6dbdd3b0fb5f803e838e9226&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4774117870&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4774117870" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+          </div>
+            <h3>コメント</h3>
+              <p>まだコメントがありません。最初にコメントを残しませんか？</p>
+              <p>コメント投稿には、twitter認証が必要です。</p>
+              <a href="https://unkode-mania.net/auth" class="btn btn-primary">Twitter認証</a>
+
+            <hr/>
+            <div class="neighborhoods-navi">
+
+                <a class="btn btn-inverse" href="https://unkode-mania.net/lang/Ruby">&laquo; Ruby一覧に戻る</a>
+              <br class="clear"/>
+            </div>
+
+            <div class="modal hide" id="modal-remove-smell">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>ウンコの削除</h3>
+              </div>
+              <div class="modal-body">
+                <p>あなたが付けたウンコなので削除することができます。</p>
+                <p>ウンコを削除しますか？</p>
+              </div>
+              <div class="modal-footer">
+                <a href="53a178ebe41bfefd61000001.html#" class="btn btn-danger" id="remove-smell">削除</a>
+                <a href="53a178ebe41bfefd61000001.html#" class="btn" data-dismiss="modal">閉じる</a>
+              </div>
+            </div>
+            <div class="modal hide" id="modal-remove-comment">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>コメントの削除</h3>
+              </div>
+              <div class="modal-body">
+                <p>あなたが投稿したコメントなので削除することができます。</p>
+                <p>コメントを削除しますか？</p>
+              </div>
+              <div class="modal-footer">
+                <a href="53a178ebe41bfefd61000001.html#" class="btn btn-danger" id="remove-comment">削除</a>
+                <a href="53a178ebe41bfefd61000001.html#" class="btn" data-dismiss="modal">閉じる</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- recommends -->
+            <h3>このウンコードに臭った人は、こちらのウンコードにも臭ってます</h3>
+            <div class="row-fluid">
+              
+                <div class="span4 unko-element">
+                  <h3>
+                    <a class="title" href="5019208444f2527722000000.html">
+                      [C++]
+                      横着はやめて
+                    </a>
+                  </h3>
+                  <div class="property">
+                    <a href="https://b.hatena.ne.jp/entry/https://unkode-mania.net/view/5019208444f2527722000000" class="hatena-bookmark-button" data-hatena-bookmark-title="[C++] 横着はやめて - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/5019208444f2527722000000" data-text="[C++] 横着はやめて - ウンコード・マニア" data-hashtags="unkode"></a>
+                  </div>
+                  <div class="markdown clear"><p>初期化子書くのが面倒なのは分かりますが…...</p>
+</div>
+                  <pre class="prettyprint">class hoge
+{
+public:
+	hoge() { memset...</pre>
+                  <p class="more"><a class="btn btn-primary view-link" href="5019208444f2527722000000.html">鑑賞する &raquo;</a></p>
+                </div><!--/span-->
+              
+                <div class="span4 unko-element">
+                  <h3>
+                    <a class="title" href="50391c6f34bf27a243000000.html">
+                      [その他]
+                      HOW TO ABC..
+                    </a>
+                  </h3>
+                  <div class="property">
+                    <a href="https://b.hatena.ne.jp/entry/https://unkode-mania.net/view/50391c6f34bf27a243000000" class="hatena-bookmark-button" data-hatena-bookmark-title="[その他] HOW TO ABC.. - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/50391c6f34bf27a243000000" data-text="[その他] HOW TO ABC.. - ウンコード・マニア" data-hashtags="unkode"></a>
+                  </div>
+                  <div class="markdown clear"><p>実際にあった某システムの超重要なマスター...</p>
+</div>
+                  <pre class="prettyprint">create table item_master (
+ A varchar(2...</pre>
+                  <p class="more"><a class="btn btn-primary view-link" href="50391c6f34bf27a243000000.html">鑑賞する &raquo;</a></p>
+                </div><!--/span-->
+              
+                <div class="span4 unko-element">
+                  <h3>
+                    <a class="title" href="5055e449a753b5d160000008.html">
+                      [C]
+                      何がしたかったのか
+                    </a>
+                  </h3>
+                  <div class="property">
+                    <a href="https://b.hatena.ne.jp/entry/https://unkode-mania.net/view/5055e449a753b5d160000008" class="hatena-bookmark-button" data-hatena-bookmark-title="[C] 何がしたかったのか - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/5055e449a753b5d160000008" data-text="[C] 何がしたかったのか - ウンコード・マニア" data-hashtags="unkode"></a>
+                  </div>
+                  <div class="markdown clear"><p>１０年位前、炎上しているプロジェクトの支...</p>
+</div>
+                  <pre class="prettyprint">void funcX() {
+    int a;
+    a = func...</pre>
+                  <p class="more"><a class="btn btn-primary view-link" href="5055e449a753b5d160000008.html">鑑賞する &raquo;</a></p>
+                </div><!--/span-->
+              
+            </div><!--/row-->
+
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; smeghead 2012 - 2021</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <form id="signout-form" action="https://unkode-mania.net/signout" method="post"></form>
+
+    <div class="modal hide" id="needs-auth-modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Twitter認証が必要です</h3>
+      </div>
+      <div class="modal-body">
+        <p>この操作をするためにはTwitter認証が必要です。</p>
+        <p>Twitter認証をすれば、コード投稿をしたりコメントしたりsmellボタンを使えるようになります。</p>
+      </div>
+      <div class="modal-footer">
+        <a href="https://unkode-mania.net/auth" class="btn btn-primary">Twitter認証</a>
+        <a href="53a178ebe41bfefd61000001.html#" class="btn" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/app.js"></script>
+
+    <div class="modal hide" id="modal-rss">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>RSSフィード</h3>
+      </div>
+      <div class="modal-body">
+        <p>新着ウンコードと新着コメントのRSSフィードは、Twitterのtweet rssをご利用ください。</p>
+        <textarea id="rss-feed" class="uneditable-input">https://unkode-mania.net/rss</textarea>
+      </div>
+      <div class="modal-footer">
+        <a href="53a178ebe41bfefd61000001.html#" class="btn" data-dismiss="modal">閉じる</a>
+      </div>
+  </body>
+</html>

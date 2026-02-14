@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Python ウンコード-ウンコード・マニア</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="「なんだこの糞コードは!(怒)」「書いた奴出てこい!(怒)」 こんな声を聞いたり、叫んだりしたことはありませんか？ ウンコードについて学ぶことによってウンコードを撲滅しましょう！ とりあえず、趣のあるウンコード鑑賞から始めて下さい">
+    <meta name="keywords" content="プログラミング,プログラマ,ウンコード,クソース,糞コード,unkode,uncode">
+    <meta name="author" content="smeghead">
+                  
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="ウンコード・マニア" href="../rss" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../img/unkode32.png" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../favicon.ico">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4VEMNV1D0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-B4VEMNV1D0');
+    </script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33744676-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script data-ad-client="ca-pub-6994803411870749" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="../js/jquery-1.7.2.min.js"></script>
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=139930182876459";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>   </div>
+    <input type="hidden" id="mobile" value="" />
+    <script>
+      var screen_name = '';
+    </script>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../index.html">ウンコード・マニア</a>
+          <div class="btn-group pull-right">
+            
+              <a class="btn dropdown-toggle" data-toggle="dropdown" href="Python.html#">
+                <i class="icon-user"></i> ゲスト
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="https://unkode-mania.net/auth">Twitterでサインイン</a></li>
+              </ul>
+            
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a href="../index.html">ホーム</a></li>
+              <li ><a href="../about.html">ウンコード・マニアについて</a></li>
+              <li><a href="mailto:smeghead7+unkode@gmail.com">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li data-url_match="^/$"><a href="../index.html"><i class="icon-home"></i>ホーム</a></li>
+              <li data-url_match="^/ranking$"><a href="../ranking.html"><i class="icon-flag"></i>職人ランキング</a></li>
+            </ul>
+            <ul class="nav nav-list">
+              <li class="nav-header">ウンコードを鑑賞する</li>
+              <li data-url_match="/legend"><a href="../legend.html"><i class="icon-film"></i>殿堂入りウンコード</a></li>
+              <li data-url_match="/hot"><a href="../hot.html"><i class="icon-thumbs-up"></i>人気ウンコード</a></li>
+              <li data-url_match="/new$"><a href="../new.html"><i class="icon-envelope"></i>新着ウンコード</a></li>
+              <li data-url_match="/new_comments"><a href="../new_comments.html"><i class="icon-envelope"></i>新着コメント</a></li>
+              <li data-url_match="/search"><a href="https://unkode-mania.net/search"><i class="icon-search"></i>サイト内検索</a></li>
+                <li data-url_match="/lang/C$"><a href="C.html"><i class="icon-list-alt"></i>C(85)</a></li>
+                <li data-url_match="/lang/Java$"><a href="Java.html"><i class="icon-list-alt"></i>Java(80)</a></li>
+                <li data-url_match="/lang/PHP$"><a href="PHP.html"><i class="icon-list-alt"></i>PHP(59)</a></li>
+                <li data-url_match="/lang/JavaScript$"><a href="JavaScript.html"><i class="icon-list-alt"></i>JavaScript(55)</a></li>
+                <li data-url_match="/lang/other$"><a href="other.html"><i class="icon-list-alt"></i>その他(44)</a></li>
+                <li data-url_match="/lang/CPP$"><a href="CPP.html"><i class="icon-list-alt"></i>C++(39)</a></li>
+                <li data-url_match="/lang/CS$"><a href="CS.html"><i class="icon-list-alt"></i>C#(35)</a></li>
+                <li data-url_match="/lang/HTML$"><a href="HTML.html"><i class="icon-list-alt"></i>HTML(18)</a></li>
+                <li data-url_match="/lang/Ruby$"><a href="Ruby.html"><i class="icon-list-alt"></i>Ruby(15)</a></li>
+                <li data-url_match="/lang/VB.net$"><a href="VB.net.html"><i class="icon-list-alt"></i>VB.net(13)</a></li>
+                <li data-url_match="/lang/Python$"><a href="Python.html"><i class="icon-list-alt"></i>Python(11)</a></li>
+                <li data-url_match="/lang/VBA$"><a href="VBA.html"><i class="icon-list-alt"></i>VBA(8)</a></li>
+                <li data-url_match="/lang/ObjC$"><a href="ObjC.html"><i class="icon-list-alt"></i>Objective-C(6)</a></li>
+                <li data-url_match="/lang/typescript$"><a href="typescript.html"><i class="icon-list-alt"></i>TypeScript(3)</a></li>
+                <li data-url_match="/lang/Perl$"><a href="Perl.html"><i class="icon-list-alt"></i>Perl(3)</a></li>
+                <li data-url_match="/lang/ActionScript$"><a href="ActionScript.html"><i class="icon-list-alt"></i>ActionScript(1)</a></li>
+                <li data-url_match="/lang/Cobol$"><a href="Cobol.html"><i class="icon-list-alt"></i>Cobol(1)</a></li>
+              <li class="nav-header">ウンコードを書く</li>
+              <li data-url_match="/register"><a class="register-link" href="https://unkode-mania.net/register"><i class="icon-pencil"></i>投稿する</a></li>
+              <li class="nav-header">ウンコード</li>
+              <li data-url_match="^/about$"><a href="../about.html"><i class="icon-info-sign"></i>ウンコード・マニアについて</a></li>
+            </ul>
+          </div><!--/.well -->
+
+
+<a class="twitter-timeline" href="https://twitter.com/unkode_mania" data-widget-id="355147085391212544">Tweets by @unkode_mania</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        </div><!--/span-->
+
+        <div class="span9">
+
+                    <div class="row-fluid">
+            <ul class="breadcrumb">
+              <li>
+                <a href="../index.html">ホーム</a> <span class="divider">/</span>
+              </li>
+              <li class="active">
+                <a href="Python.html">Python</a>
+              </li>
+            </ul>
+
+            <span id="type" data-value="Python"></span>
+
+            <h2>
+                Python
+            </h2>
+
+            <div id="codes">
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=tannakaken">
+                  tannakaken
+                </a>
+                2023-02-20 09:23:10
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/63f33bfe2d2fef9270888e8e.html">
+                  [Python]
+                  mypyではないのでtheirpyとでも...
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/63f33bfe2d2fef9270888e8e" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] mypyではないのでtheirpyとでも名付けようか   - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/63f33bfe2d2fef9270888e8e" data-text="[Python] mypyではないのでtheirpyとでも名付けようか   - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>私がとある会社に入って初めてPython...</p>
+</div>
+                <pre class="prettyprint">def some_func(arg: int) -&gt; [int]:
+    p...</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/63f33bfe2d2fef9270888e8e.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=tannakaken">
+                  tannakaken
+                </a>
+                2022-10-21 02:19:31
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/635201b33f52c21efbd59ba8.html">
+                  [Python]
+                  空文字列をisで判定するな。二つ目の引数...
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/635201b33f52c21efbd59ba8" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] 空文字列をisで判定するな。二つ目の引数はただのgetだろ！ - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/635201b33f52c21efbd59ba8" data-text="[Python] 空文字列をisで判定するな。二つ目の引数はただのgetだろ！ - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>せめて使用するプログラミング言語に入門し...</p>
+</div>
+                <pre class="prettyprint">some_function(
+    data.get(&#39;key1&#39;) if ...</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/635201b33f52c21efbd59ba8.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=tannakaken">
+                  tannakaken
+                </a>
+                2022-10-14 06:30:11
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/634900c616a61bafcb25b880.html">
+                  [Python]
+                  短いコードにたくさんツッコミどころを入れ...
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/634900c616a61bafcb25b880" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] 短いコードにたくさんツッコミどころを入れる大会ですか？ - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/634900c616a61bafcb25b880" data-text="[Python] 短いコードにたくさんツッコミどころを入れる大会ですか？ - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>「Pythonではインデックスに負の数も...</p>
+</div>
+                <pre class="prettyprint">file_type = filename.split(&#39;.&#39;)
+file_ty...</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/634900c616a61bafcb25b880.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=tannakaken">
+                  tannakaken
+                </a>
+                2021-09-18 10:31:13
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/6145beaf94b791c966bf7a71.html">
+                  [Python]
+                  何重にも間違ってるやんけ
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/6145beaf94b791c966bf7a71" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] 何重にも間違ってるやんけ - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/6145beaf94b791c966bf7a71" data-text="[Python] 何重にも間違ってるやんけ - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>ぜひ手元の環境でこの定数の値がなんなのか...</p>
+</div>
+                <pre class="prettyprint">ASCII_ALPHABET = &quot;&quot;.join(chr(0x40 + i) f...</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/6145beaf94b791c966bf7a71.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=iorin_love_ML">
+                  iorin_love_ML
+                </a>
+                2021-09-04 07:25:59
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/61331f87c4b6a6cc50ed29f2.html">
+                  [Python]
+                  政治家と癒着した日系企業
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/61331f87c4b6a6cc50ed29f2" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] 政治家と癒着した日系企業 - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/61331f87c4b6a6cc50ed29f2" data-text="[Python] 政治家と癒着した日系企業 - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>揉み消しダメぜったい
+(論文のソースコ...</p>
+</div>
+                <pre class="prettyprint">try:
+   ~~~~~
+
+except:
+    continue</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/61331f87c4b6a6cc50ed29f2.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=KuroN_FE0">
+                  KuroN_FE0
+                </a>
+                2019-03-18 12:58:06
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/5c8f95de80271fee52000001.html">
+                  [Python]
+                  appendして仕事した気になっている奴
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/5c8f95de80271fee52000001" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] appendして仕事した気になっている奴 - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/5c8f95de80271fee52000001" data-text="[Python] appendして仕事した気になっている奴 - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>Kerasの機械学習で遊んでいた自分がや...</p>
+</div>
+                <pre class="prettyprint">import pandas as pd
+
+dumb=pd.DataFrame...</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/5c8f95de80271fee52000001.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=kwtsh365">
+                  kwtsh365
+                </a>
+                2018-12-17 08:59:29
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/5c176571e24fd64313000001.html">
+                  [Python]
+                  高々14行でやらかす
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/5c176571e24fd64313000001" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] 高々14行でやらかす - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/5c176571e24fd64313000001" data-text="[Python] 高々14行でやらかす - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>13行目でimportしたモジュールを上...</p>
+</div>
+                <pre class="prettyprint">import math
+import numpy as np
+import ...</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/5c176571e24fd64313000001.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=JujujuMr">
+                  JujujuMr
+                </a>
+                2018-11-17 04:58:17
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/5bef9f9289b479603d000001.html">
+                  [Python]
+                  関係ない人が巻き込まれる
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/5bef9f9289b479603d000001" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] 関係ない人が巻き込まれる - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/5bef9f9289b479603d000001" data-text="[Python] 関係ない人が巻き込まれる - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>一人のユーザーが100回以上リクエスト投...</p>
+</div>
+                <pre class="prettyprint">global requestcount
+requestcount += 1  ...</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/5bef9f9289b479603d000001.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=non_117">
+                  non_117
+                </a>
+                2012-08-14 05:33:33
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/5029e32deef2c7161800000e.html">
+                  [Python]
+                  300〜302まで何でもおっけー
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/5029e32deef2c7161800000e" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] 300〜302まで何でもおっけー - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/5029e32deef2c7161800000e" data-text="[Python] 300〜302まで何でもおっけー - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>web系のプロジェクトにて.</p>
+
+<p>30...</p>
+</div>
+                <pre class="prettyprint"> if response.status_code/3 == 100:
+    ...</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/5029e32deef2c7161800000e.html">鑑賞する &raquo;</a></p>
+              </div>
+              <hr />
+              <div class="property">
+                <a href="https://twitter.com/intent/user?screen_name=zundan">
+                  zundan
+                </a>
+                2012-08-02 05:23:32
+              </div>
+              <h2 class="title">
+                <a class="title" href="../view/501a0ed45ee6932d0b000001.html">
+                  [Python]
+                  なんでsortされへんの？
+                </a>
+                <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/501a0ed45ee6932d0b000001" class="hatena-bookmark-button" data-hatena-bookmark-title="[Python] なんでsortされへんの？ - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/501a0ed45ee6932d0b000001" data-text="[Python] なんでsortされへんの？ - ウンコード・マニア" data-hashtags="unkode"></a>
+              </h2>
+              <div class="comment clear">
+                <div class="markdown"><p>かっこいい！</p>
+</div>
+                <pre class="prettyprint">ary = [3, 2, 1]
+ary.sort
+print ary</pre>
+                <p class="more"><a class="btn btn-primary view-link" href="../view/501a0ed45ee6932d0b000001.html">鑑賞する &raquo;</a></p>
+              </div>
+            </div>
+            <hr />
+            <p class="more-code"><a id="more-code" class="btn btn-info" data-page="1">もっと読む &raquo;</a></p>
+          </div>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+<script id="tmpl-code" type="text/x-jquery-tmpl">
+            <hr />
+            <div class="property">
+              <a href="https://twitter.com/intent/user?screen_name=${screen_name}">
+                ${screen_name}
+              </a>
+              ${created_at}
+            </div>
+            <h2 class="title">
+              <a href="https://unkode-mania.net/view/${id}">
+                [${lang}]
+                ${title}
+              </a>
+              <a href="http://b.hatena.ne.jp/entry/https://unkode-mania.net/view/${id}" class="hatena-bookmark-button" data-hatena-bookmark-title="[${lang}] ${title} - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/${id}" data-text="[${lang}] ${title} - ウンコード・マニア" data-hashtags="unkode"></a>
+            </h2>
+            <div class="comment clear">
+              <div class="markdown">{{html comment}}</div>
+              <pre class="prettyprint">${content}</pre>
+              <p class="more"><a class="btn btn-primary view-link" href="https://unkode-mania.net/view/${id}">鑑賞する &raquo;</a></p>
+            </div>
+</script>
+
+
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; smeghead 2012 - 2021</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <form id="signout-form" action="https://unkode-mania.net/signout" method="post"></form>
+
+    <div class="modal hide" id="needs-auth-modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Twitter認証が必要です</h3>
+      </div>
+      <div class="modal-body">
+        <p>この操作をするためにはTwitter認証が必要です。</p>
+        <p>Twitter認証をすれば、コード投稿をしたりコメントしたりsmellボタンを使えるようになります。</p>
+      </div>
+      <div class="modal-footer">
+        <a href="https://unkode-mania.net/auth" class="btn btn-primary">Twitter認証</a>
+        <a href="Python.html#" class="btn" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/app.js"></script>
+
+    <div class="modal hide" id="modal-rss">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>RSSフィード</h3>
+      </div>
+      <div class="modal-body">
+        <p>新着ウンコードと新着コメントのRSSフィードは、Twitterのtweet rssをご利用ください。</p>
+        <textarea id="rss-feed" class="uneditable-input">https://unkode-mania.net/rss</textarea>
+      </div>
+      <div class="modal-footer">
+        <a href="Python.html#" class="btn" data-dismiss="modal">閉じる</a>
+      </div>
+  </body>
+</html>

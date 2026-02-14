@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+<title>ウンコード・マニア</title>
+<link>https://unkode-mania.net/</link>
+<language>ja-JP</language>
+<pubDate>Sat, 14 Feb 2026 07:06:31 GMT</pubDate>
+<description>ウンコード・マニアは、プログラマのためのストレス解消サイトであり教育サイトです。
+ 主に他の人が創作したウンコードを鑑賞するのが目的です。</description>
+<image>
+<url>https://unkode-mania.net//img/unkode.png</url>
+<title>ウンコード・マニア</title>
+<link>https://unkode-mania.net/</link>
+<description>ウンコード・マニアは、プログラマのためのストレス解消サイトであり教育サイトです。
+ 主に他の人が創作したウンコードを鑑賞するのが目的です。</description>
+</image>
+<item>
+<title>[その他] うんこには💩なりの正義がある！</title>
+<link>https://unkode-mania.net/view/64436a0704bfedcb6e68024c</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/64436a0704bfedcb6e68024c</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @kiitodayo_d&lt;/p&gt;
+💩コードの撲滅ではなく、💩コードを受け入れる世界が来る！いや、作る！
+💩コード撲滅委員会反対派、💩コード拡散員会がお送りいたしました。
+
+&lt;pre&gt;const red = 16711712;
+const mido = 0x06ed25;
+const ao = 0x1c34e5;&lt;/pre&gt;</description>
+</item>
+<item>
+<title>[C#] もっと親の顔見ろよ!! お前それもうラーニング済だろ!!</title>
+<link>https://unkode-mania.net/view/6425bb6d09bb26daa8fefb57</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/6425bb6d09bb26daa8fefb57</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @garigane&lt;/p&gt;
+## とある現場で見たウンコード
+内容はこんなに単純じゃないですが、  
+継承されたクラスのメソッド内の至るところで親クラスのインスタンス生成して、親クラスのメソッドを呼んでましたw
+
+&lt;pre&gt;public class Test
+{
+    public static void Main(){
+        // Your code here!
+        
+        System.Console.WriteLine(&amp;quot;Hello C#&amp;quot;);
+        
+        Child c = new Child();
+        c.childMethod1();
+        c.childMethod2();
+    }
+}
+
+public class Parent
+{
+    public void parentMethod()
+    {
+        System.Console.WriteLine(&amp;quot;Parent Method&amp;quot;);
+    }
+}
+
+public class Child : Parent
+{
+    public void childMethod1()
+    {
+        // &#x3042;&#x308B;&#x51E6;&#x7406;
+        
+        Parent parent = new Parent();
+        parent.parentMethod();
+        
+        // &#x3042;&#x308B;&#x51E6;&#x7406;
+    }
+    
+    public void childMethod2()
+    {
+        // &#x3042;&#x308B;&#x51E6;&#x7406;
+        
+        Parent parent = new Parent();
+        parent.parentMethod();
+        
+        // &#x3042;&#x308B;&#x51E6;&#x7406;
+    }
+}&lt;/pre&gt;</description>
+</item>
+<item>
+<title>[VBA] 敢えてその変数名にするのかー</title>
+<link>https://unkode-mania.net/view/64140ac27f7faf38c6b49870</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/64140ac27f7faf38c6b49870</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @cool0707&lt;/p&gt;
+某ベンダーが構築したシステムが出力するエクセルファイル内に書かれていたコード。
+ちなみにThisWorkbookが使えなくなるため、別のところで`hogehogefilename = thisworkbook.Name`として `Workbooks(hogehogefilename )`で呼び出していました。
+
+&lt;pre&gt;Workbooks.Open pathFolder &amp;amp; &amp;quot;\&amp;quot; &amp;amp; filename
+Dim thisworkbook As Workbook
+Set thisworkbook = Workbooks(filename)
+sheetcnt = thisworkbook.Sheets.Count
+&#39;&#x30D6;&#x30C3;&#x30AF;&#x5185;&#x306E;&#x30B7;&#x30FC;&#x30C8;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x30EB;&#x30FC;&#x30D7;
+For i = 1 To sheetcnt
+    Dim sheetname As String&lt;/pre&gt;</description>
+</item>
+<item>
+<title>[PHP] 生PHPとかそういうレベルのものではないもっと恐ろしいものの片鱗を味わったぜ</title>
+<link>https://unkode-mania.net/view/6400c3d07308fafe1d1c26a3</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/6400c3d07308fafe1d1c26a3</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @tannakaken&lt;/p&gt;
+色々な趣深いコードを見てきましたが、やばいものは大概コードの細部だけでなく全体の構造もやばい気がします。これはその中でも1・２を争う思い出深いものです。
+
+とある会社さんの公開されてるアプリに機能を追加するにあたって、このままでは機能追加しにくいのでまず改修、という話で見せられたのが下記のようなファイルの群れでした。
+
+これはコマンドラインツールではなく、このようにcallが一つだけあるクラス定義とインスタンス化及びメソッドの呼び出しが書かれた幾つものPHPファイルがお互いにシェルを通して呼び合うことで、最終的にはWebアプリとして動いているのです。職業プログラマとしての初めて読んだ他人のコードがこれで、どんな本にも載っていないものが出てきてとてもびっくりしたのを覚えています。
+
+随分経ってから書いた人に意図を聞いたら「プロトタイプとしてコマンドラインツールを書いたら、これが本番環境に投入されて」と言っていました。その場では納得しかけましたが、後で「プロトタイプでもこうは書かないよ！」と思いました。
+
+Laravelに書き直したものは僕の手を離れて今も動いています。
+
+&lt;pre&gt;&amp;lt;?php
+
+class SomeClass {
+  public function call() {
+    $arg1 = $argv[1];
+    $arg2 = $argv[2];
+    //  &#x8272;&#x3005;&#x306A;&#x51E6;&#x7406;
+    $command = sprintf(&amp;quot;php ./OtherClass.php %s $d&amp;quot;, $str, $num);
+    exec($command);
+  }
+}
+
+$instance = new SomeClass();
+$instance-&amp;gt;call();&lt;/pre&gt;</description>
+</item>
+<item>
+<title>[TypeScript] いつだって人間は自分で自分の足を撃つ方法を見つける</title>
+<link>https://unkode-mania.net/view/6400bcaaecfae3d421e653e4</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/6400bcaaecfae3d421e653e4</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @tannakaken&lt;/p&gt;
+保守を引き継ぎしたangularのプロジェクトでstrictNullChecksもnoImplicitAnyも設定されていなかったから、徹底的にリファクタリングしてようやくTypeScriptの型エラーを消して、次はfullTemplateTypeCheckとstrictTemplatesとでテンプレート側も型チェックだと思ったら見つかった型定義。
+
+このプロジェクトはサーバー側のFlaskもPythonの型ヒントのやり方を一切理解せずに自己流の型ヒントをつけていてびっくりしたが、TypeScript側にもあったとは。
+
+型定義のルールを全く理解せずに型をつけて、型チェックするとコンパイルが通らないから型チェックを甘くした、というところなのだろうか。
+コメントで実装の説明をすると、実装を変更したときコメントを直さなかったゆえにコメントが嘘になってしまうことがある。それと比べると型の方が、
+嘘になったらコンパイルできなくなるはずなのでありがたいはずなのだが、こんなことされたらお手上げだ、
+
+自分で自分の足を撃たないための仕組みというが、人間の創造性を甘く見てはいけない。いつだって人間は自分で自分の足を撃つ方法を見つけるのだ。
+
+&lt;pre&gt;export class AlertComponent {
+    // &#x672C;&#x5F53;&#x306F;@Input() type: &#39;primary&#39; | &#39;accent&#39; | &#39;warn&#39;;&#x3068;&#x66F8;&#x304D;&#x305F;&#x304B;&#x3063;&#x305F;&#x306E;&#x3060;&#x308D;&#x3046;&#x3002;
+    @Input() type: &#39;primary | accent | warn&#39;;
+}&lt;/pre&gt;</description>
+</item>
+<item>
+<title>[TypeScript] 関数呼び出すたびに毎回prototypeを設定すんの？</title>
+<link>https://unkode-mania.net/view/63fdaa0de4f85b3815eefba2</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/63fdaa0de4f85b3815eefba2</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @tannakaken&lt;/p&gt;
+多分、ググって出てきたJavaScriptのコードをprototypeが何かを一切理解せずにコピペしたんだろうね。
+
+JavaScriptに関する理解も皆無ならTypeScriptに関する理解があるわけなく、「これで動くはずなのになんでfillVerticalTextがないなんていうんだろ？」と思って@ts-ignoreしたんだろうね。
+
+こういう時はせめて「ここを参考にした」とか「よく理解せずに書いてる」とかコメント書いたらどうなんだろう。
+
+少し落ち着いて考えて「ctxを引数にとる関数fillVerticalText(ctx: CanvasRenderingContext2D, ...)を作ればいいじゃん」と気づくの、そんなに難しいことじゃないと思う。
+
+自分の使ってる道具について理解してから使えとは言わない（それは多分誰にもできない）けど、せめて「ちゃんと理解したい」という思いの伝わるコードを書きたいものだね。
+
+これを書いた人も、これをレビューしたことにして右から左へ流した人もみんなどこかで元気に働いているみたいだが、その職場に何事もないことを願うよ。
+
+&lt;pre&gt;declare const CanvasRenderingContext2D: any;
+
+export class SomeComponent {
+    // angular&#x306E;Component&#x306B;&#x95A2;&#x3059;&#x308B;&#x8A2D;&#x5B9A;
+
+    verticallyRotatedText(text) {
+        CanvasRenderingContext2D.prototype.fillVerticalText = function (text, x, y, verticalSpacing) {
+            for (var i = 0; i &amp;lt; text.length; i++) {
+                if (text[i].charCodeAt(0) == 12540) {
+                    this.fillText(&#39;|&#39;, x, y + i * verticalSpacing);
+                } else {
+                    this.fillText(text[i], x, y + i * verticalSpacing);
+                }
+            }
+        };
+        let canvas = document.createElement(&#39;canvas&#39;);
+        // canvas&#x306B;&#x95A2;&#x3059;&#x308B;&#x8A2D;&#x5B9A;
+        let ctx = canvas.getContext(&#39;2d&#39;);
+        // ctx&#x306B;&#x95A2;&#x3059;&#x308B;&#x8A2D;&#x5B9A;
+        //@ts-ignore
+        ctx.fillVerticalText(text, 20, 20, 40);
+        return canvas.toDataURL();
+    }
+}&lt;/pre&gt;</description>
+</item>
+<item>
+<title>[Python] mypyではないのでtheirpyとでも名付けようか  </title>
+<link>https://unkode-mania.net/view/63f33bfe2d2fef9270888e8e</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/63f33bfe2d2fef9270888e8e</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @tannakaken&lt;/p&gt;
+私がとある会社に入って初めてPythonを本格的に書き始め、そこで型ヒントを初めて見ました。 それがこれです。すでにリリースされ本番運用されていたアプリでした。 しばらく「こう言うものなのか」と思っていましたが、調べれば調べるほど疑問が増えてきて、最終的に「Pythonの型ヒントを全く知らない奴が書いて、それを他の人（少なくとももう一人このコードを読んでいたはず）も特に疑問も持たずにスルーしてた」と気づいたときにはとてもびっくりしました。
+
+&lt;pre&gt;def some_func(arg: int) -&amp;gt; [int]:
+    pass
+ 
+def other_func(arg: {}) -&amp;gt; ([], int, []):
+    pass&lt;/pre&gt;</description>
+</item>
+<item>
+<title>[TypeScript] 拡張子だけ見たらこれでもTypeScriptなんですよ</title>
+<link>https://unkode-mania.net/view/63f08525ea21bd475dcd8f8a</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/63f08525ea21bd475dcd8f8a</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @tannakaken&lt;/p&gt;
+保守を引き継いだTypeScriptのコードでtsconfigのstrictNullChecksが設定されてなかったからtrueに設定したら、
+画面に収まりきらない量のエラーが。
+その中でも一番面白かったのがこれ。
+PHPかなんかと勘違いされてますか？
+TypeScriptであるメリットをぶん投げっぷりに感心した。
+これで動くJavaScriptもすごいけど。
+
+&lt;pre&gt;const preferredTimePriorities = [];
+preferredTimePriorities[&#39;10..12&#39;] = 1;
+preferredTimePriorities[&#39;12..16&#39;] = 2;
+preferredTimePriorities[&#39;16..19&#39;] = 3;
+preferredTimePriorities[&#39;19..24&#39;] = 4;
+preferredTimePriorities[&#39;10&#39;] = 5;
+preferredTimePriorities[&#39;11&#39;] = 6;
+preferredTimePriorities[&#39;12&#39;] = 7;
+preferredTimePriorities[&#39;13&#39;] = 8;
+preferredTimePriorities[&#39;14&#39;] = 9;
+preferredTimePriorities[&#39;15&#39;] = 10;
+preferredTimePriorities[&#39;16&#39;] = 11;
+preferredTimePriorities[&#39;17&#39;] = 12;
+preferredTimePriorities[&#39;18&#39;] = 13;
+preferredTimePriorities[&#39;19&#39;] = 14;
+preferredTimePriorities[&#39;20&#39;] = 15;
+preferredTimePriorities[&#39;21&#39;] = 16;
+preferredTimePriorities[&#39;22&#39;] = 17;
+preferredTimePriorities[&#39;23&#39;] = 18;
+preferredTimePriorities[&#39;24&#39;] = 19;&lt;/pre&gt;</description>
+</item>
+<item>
+<title>COMMENT [C#] いや、for使おうよ……</title>
+<link>https://unkode-mania.net/view/5c62b3115fc9f4ab4c000000#comment_63e627b7c0f7115e295bd0a3</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/5c62b3115fc9f4ab4c000000#comment_63e627b7c0f7115e295bd0a3</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @i_ja_mu&lt;/p&gt;
+for文を排除するこのコーディングスタイル好き。</description>
+</item>
+<item>
+<title>[その他] (シェルスクリプト)お前、while文に与えるものは条件式だと思ってるだろ。</title>
+<link>https://unkode-mania.net/view/63e626f9ea7172ff1d53b369</link>
+<guid isPermaLink="true">https://unkode-mania.net/view/63e626f9ea7172ff1d53b369</guid>
+<description>&lt;p class=&quot;author&quot;&gt;posted by @i_ja_mu&lt;/p&gt;
+このコードはお前の期待通りに動くけど気に入らない。お前はCと同じ感覚でやってるだろ。解説してやる。whileの後に続くのはコマンドで、&quot;[&quot;はコマンドで&quot;test&quot;コマンドと同様だが最後の引数は&quot;]&quot;じゃないといけない。(最後の&quot;]&quot;を除き)引数が一つあるとその引数が空文字じゃなければ終了コード0になる。即ちおまえの感覚でtrueとなる。終了コードが0以外ならばfalseのようなものだ。このコマンドはBashの&quot;[[&quot;という「文法」とかとは別モノ。わかれ。あってたまるかこのコードが解説の中に。
+
+
+&lt;pre&gt;while [ 1 ]; do&lt;/pre&gt;</description>
+</item>
+</channel>
+</rss>

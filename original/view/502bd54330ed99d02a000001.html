@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>[PHP] データベースに・・・・うわぁぁぁぁぁあ-ウンコード・マニア</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="「なんだこの糞コードは!(怒)」「書いた奴出てこい!(怒)」 こんな声を聞いたり、叫んだりしたことはありませんか？ ウンコードについて学ぶことによってウンコードを撲滅しましょう！ とりあえず、趣のあるウンコード鑑賞から始めて下さい">
+    <meta name="keywords" content="プログラミング,プログラマ,ウンコード,クソース,糞コード,unkode,uncode">
+    <meta name="author" content="smeghead">
+                  
+    <!-- Le styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="ウンコード・マニア" href="https://unkode-mania.net/rss" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../img/unkode32.png" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../favicon.ico">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4VEMNV1D0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-B4VEMNV1D0');
+    </script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33744676-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script data-ad-client="ca-pub-6994803411870749" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="../js/jquery-1.7.2.min.js"></script>
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=139930182876459";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>   </div>
+    <input type="hidden" id="mobile" value="" />
+    <script>
+      var screen_name = '';
+    </script>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="https://unkode-mania.net/">ウンコード・マニア</a>
+          <div class="btn-group pull-right">
+            
+              <a class="btn dropdown-toggle" data-toggle="dropdown" href="502bd54330ed99d02a000001.html#">
+                <i class="icon-user"></i> ゲスト
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="https://unkode-mania.net/auth">Twitterでサインイン</a></li>
+              </ul>
+            
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a href="https://unkode-mania.net/">ホーム</a></li>
+              <li ><a href="https://unkode-mania.net/about">ウンコード・マニアについて</a></li>
+              <li><a href="mailto:smeghead7+unkode@gmail.com">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li data-url_match="^/$"><a href="https://unkode-mania.net/"><i class="icon-home"></i>ホーム</a></li>
+              <li data-url_match="^/ranking$"><a href="https://unkode-mania.net/ranking"><i class="icon-flag"></i>職人ランキング</a></li>
+            </ul>
+            <ul class="nav nav-list">
+              <li class="nav-header">ウンコードを鑑賞する</li>
+              <li data-url_match="/legend"><a href="https://unkode-mania.net/legend"><i class="icon-film"></i>殿堂入りウンコード</a></li>
+              <li data-url_match="/hot"><a href="https://unkode-mania.net/hot"><i class="icon-thumbs-up"></i>人気ウンコード</a></li>
+              <li data-url_match="/new$"><a href="https://unkode-mania.net/new"><i class="icon-envelope"></i>新着ウンコード</a></li>
+              <li data-url_match="/new_comments"><a href="https://unkode-mania.net/new_comments"><i class="icon-envelope"></i>新着コメント</a></li>
+              <li data-url_match="/search"><a href="https://unkode-mania.net/search"><i class="icon-search"></i>サイト内検索</a></li>
+                <li data-url_match="/lang/C$"><a href="https://unkode-mania.net/lang/C"><i class="icon-list-alt"></i>C(85)</a></li>
+                <li data-url_match="/lang/Java$"><a href="https://unkode-mania.net/lang/Java"><i class="icon-list-alt"></i>Java(80)</a></li>
+                <li data-url_match="/lang/PHP$"><a href="https://unkode-mania.net/lang/PHP"><i class="icon-list-alt"></i>PHP(59)</a></li>
+                <li data-url_match="/lang/JavaScript$"><a href="https://unkode-mania.net/lang/JavaScript"><i class="icon-list-alt"></i>JavaScript(55)</a></li>
+                <li data-url_match="/lang/other$"><a href="https://unkode-mania.net/lang/other"><i class="icon-list-alt"></i>その他(44)</a></li>
+                <li data-url_match="/lang/CPP$"><a href="https://unkode-mania.net/lang/CPP"><i class="icon-list-alt"></i>C++(39)</a></li>
+                <li data-url_match="/lang/CS$"><a href="https://unkode-mania.net/lang/CS"><i class="icon-list-alt"></i>C#(35)</a></li>
+                <li data-url_match="/lang/HTML$"><a href="https://unkode-mania.net/lang/HTML"><i class="icon-list-alt"></i>HTML(18)</a></li>
+                <li data-url_match="/lang/Ruby$"><a href="https://unkode-mania.net/lang/Ruby"><i class="icon-list-alt"></i>Ruby(15)</a></li>
+                <li data-url_match="/lang/VB.net$"><a href="https://unkode-mania.net/lang/VB.net"><i class="icon-list-alt"></i>VB.net(13)</a></li>
+                <li data-url_match="/lang/Python$"><a href="https://unkode-mania.net/lang/Python"><i class="icon-list-alt"></i>Python(11)</a></li>
+                <li data-url_match="/lang/VBA$"><a href="https://unkode-mania.net/lang/VBA"><i class="icon-list-alt"></i>VBA(8)</a></li>
+                <li data-url_match="/lang/ObjC$"><a href="https://unkode-mania.net/lang/ObjC"><i class="icon-list-alt"></i>Objective-C(6)</a></li>
+                <li data-url_match="/lang/typescript$"><a href="https://unkode-mania.net/lang/typescript"><i class="icon-list-alt"></i>TypeScript(3)</a></li>
+                <li data-url_match="/lang/Perl$"><a href="https://unkode-mania.net/lang/Perl"><i class="icon-list-alt"></i>Perl(3)</a></li>
+                <li data-url_match="/lang/ActionScript$"><a href="https://unkode-mania.net/lang/ActionScript"><i class="icon-list-alt"></i>ActionScript(1)</a></li>
+                <li data-url_match="/lang/Cobol$"><a href="https://unkode-mania.net/lang/Cobol"><i class="icon-list-alt"></i>Cobol(1)</a></li>
+              <li class="nav-header">ウンコードを書く</li>
+              <li data-url_match="/register"><a class="register-link" href="https://unkode-mania.net/register"><i class="icon-pencil"></i>投稿する</a></li>
+              <li class="nav-header">ウンコード</li>
+              <li data-url_match="^/about$"><a href="https://unkode-mania.net/about"><i class="icon-info-sign"></i>ウンコード・マニアについて</a></li>
+            </ul>
+          </div><!--/.well -->
+
+
+<a class="twitter-timeline" href="https://twitter.com/unkode_mania" data-widget-id="355147085391212544">Tweets by @unkode_mania</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        </div><!--/span-->
+
+        <div class="span9">
+
+                    <div id="code-info" data-id="502bd54330ed99d02a000001"></div>
+          <script>
+            var smell_json = '[{"line":1,"author":{"user_id":"10327412","screen_name":"tomyuk"},"id":"503058ea943a41d203000019"},{"line":1,"author":{"user_id":"10327412","screen_name":"tomyuk"},"id":"50305917943a41d203000038"},{"line":2,"id":"50305916943a41d203000037","author":{"screen_name":"tomyuk","user_id":"10327412"}},{"author":{"user_id":"108447598","screen_name":"kon_dodo"},"id":"502e4fa581376a9043000007","line":3},{"id":"503058ee943a41d20300001a","author":{"user_id":"10327412","screen_name":"tomyuk"},"line":3},{"line":3,"author":{"screen_name":"tomyuk","user_id":"10327412"},"id":"503058f2943a41d20300001b"},{"line":4,"id":"50305915943a41d203000036","author":{"screen_name":"tomyuk","user_id":"10327412"}},{"author":{"screen_name":"kon_dodo","user_id":"108447598"},"id":"502e4fa881376a9043000008","line":5},{"author":{"screen_name":"tomyuk","user_id":"10327412"},"id":"503058f3943a41d20300001c","line":5},{"line":5,"author":{"user_id":"10327412","screen_name":"tomyuk"},"id":"503058f3943a41d20300001d"},{"line":6,"author":{"screen_name":"tomyuk","user_id":"10327412"},"id":"50305914943a41d203000035"},{"line":7,"id":"503058f7943a41d20300001e","author":{"user_id":"10327412","screen_name":"tomyuk"}},{"line":7,"id":"503310e2383b80843a000002","author":{"user_id":"770829194","screen_name":"doru_ai"}},{"line":7,"author":{"user_id":"770829194","screen_name":"doru_ai"},"id":"503310e3383b80843a000003"},{"line":8,"id":"503058f7943a41d20300001f","author":{"screen_name":"tomyuk","user_id":"10327412"}},{"author":{"screen_name":"tomyuk","user_id":"10327412"},"id":"50305913943a41d203000034","line":9},{"line":10,"author":{"user_id":"10327412","screen_name":"tomyuk"},"id":"503058f9943a41d203000020"},{"author":{"user_id":"10327412","screen_name":"tomyuk"},"id":"503058fa943a41d203000021","line":11},{"line":12,"id":"503058fa943a41d203000022","author":{"user_id":"10327412","screen_name":"tomyuk"}},{"id":"5bf782f924a20e7d52000000","author":{"screen_name":"JujujuMr","user_id":null},"line":12},{"line":12,"author":{"screen_name":"JujujuMr","user_id":null},"id":"5bf782fa24a20e7d52000002"},{"line":12,"id":"5bf782fa24a20e7d52000001","author":{"user_id":null,"screen_name":"JujujuMr"}},{"line":13,"id":"502bd6d030ed99d02a000003","author":{"user_id":null,"screen_name":"DsYochibe"}},{"line":13,"id":"502c2ddf8948ac0c52000001","author":{"screen_name":"nappa","user_id":"5728432"}},{"line":13,"author":{"screen_name":"imasaraikasama","user_id":null},"id":"502c40328948ac2943000004"},{"line":13,"id":"502c4c6f8948ac7538000000","author":{"screen_name":"math_neko","user_id":"232545906"}},{"author":{"screen_name":"Ajiro_s","user_id":null},"id":"502c91bb844fbb466d000010","line":13},{"line":13,"author":{"user_id":"6162842","screen_name":"nakatani"},"id":"502cad6c844fbbbe12000001"},{"line":13,"id":"502d20819251a9c23e000012","author":{"screen_name":"HarpoonArrow","user_id":"325443309"}},{"line":13,"id":"502e4fb481376a9043000009","author":{"user_id":"108447598","screen_name":"kon_dodo"}},{"author":{"screen_name":"kon_dodo","user_id":"108447598"},"id":"502e4fc881376a904300000a","line":13},{"line":13,"author":{"user_id":"288203300","screen_name":"mikecat_mixc"},"id":"502edd09ab0bbf637e000010"},{"line":13,"author":{"screen_name":"natsu_nanana","user_id":"18376369"},"id":"5030555d943a41f044000001"},{"id":"5030573d943a41d203000004","author":{"user_id":"96152498","screen_name":"hanisinatakuan"},"line":13},{"line":13,"author":{"user_id":"96152498","screen_name":"hanisinatakuan"},"id":"5030573e943a41d203000005"},{"line":13,"author":{"user_id":null,"screen_name":"1000_VICKY"},"id":"50305839943a41d203000008"},{"author":{"screen_name":"tomyuk","user_id":"10327412"},"id":"503058fc943a41d203000023","line":13},{"line":13,"id":"503058fc943a41d203000024","author":{"user_id":"10327412","screen_name":"tomyuk"}},{"id":"50306551943a41d47b00000a","author":{"screen_name":"momimist","user_id":"106051119"},"line":13},{"id":"50306a38943a41503c000002","author":{"screen_name":"ItSANgo","user_id":null},"line":13},{"author":{"user_id":"14144737","screen_name":"khirose"},"id":"503086cc383b809525000004","line":13},{"line":13,"id":"5030db83383b803b21000004","author":{"screen_name":"uncle_istvan","user_id":null}},{"line":13,"author":{"screen_name":"vikke","user_id":"11596312"},"id":"5030fb9d383b80451c000004"},{"author":{"user_id":"39251911","screen_name":"superbacker"},"id":"50310a00383b80c21a000005","line":13},{"line":13,"author":{"user_id":"17156188","screen_name":"greenspa"},"id":"50310b98383b80c21a00000e"},{"line":13,"id":"50310b99383b80c21a00000f","author":{"screen_name":"greenspa","user_id":"17156188"}},{"id":"50310b99383b80c21a000010","author":{"screen_name":"greenspa","user_id":"17156188"},"line":13},{"line":13,"id":"50319322383b800b5e000003","author":{"user_id":"17983345","screen_name":"roworks"}},{"line":13,"author":{"screen_name":"Verna_Velna","user_id":"87862729"},"id":"5031b084383b80c959000002"},{"line":13,"id":"5031c084383b802715000001","author":{"screen_name":"m_shige1979","user_id":"150068963"}},{"line":13,"author":{"user_id":"623594857","screen_name":"Fukuoka_Techno"},"id":"50322918383b80cd0a000005"},{"line":13,"id":"50324786383b80240b000008","author":{"user_id":"345196825","screen_name":"gradou2"}},{"id":"50327d89383b808445000001","author":{"screen_name":"hardtimes777","user_id":"593881920"},"line":13},{"line":13,"author":{"screen_name":"doru_ai","user_id":"770829194"},"id":"503310e5383b80843a000004"},{"id":"503310e8383b80843a000005","author":{"screen_name":"doru_ai","user_id":"770829194"},"line":13},{"line":13,"id":"503310e9383b80843a000006","author":{"user_id":"770829194","screen_name":"doru_ai"}},{"id":"503310e9383b80843a000007","author":{"screen_name":"doru_ai","user_id":"770829194"},"line":13},{"author":{"user_id":"770829194","screen_name":"doru_ai"},"id":"503310e9383b80843a000008","line":13},{"id":"503310e9383b80843a000009","author":{"user_id":"770829194","screen_name":"doru_ai"},"line":13},{"id":"503310e9383b80843a00000a","author":{"user_id":"770829194","screen_name":"doru_ai"},"line":13},{"line":13,"id":"503310ea383b80843a00000b","author":{"user_id":"770829194","screen_name":"doru_ai"}},{"line":13,"author":{"screen_name":"doru_ai","user_id":"770829194"},"id":"503310ea383b80843a00000c"},{"id":"503310ea383b80843a00000d","author":{"screen_name":"doru_ai","user_id":"770829194"},"line":13},{"author":{"user_id":"770829194","screen_name":"doru_ai"},"id":"503310eb383b80843a00000e","line":13},{"line":13,"author":{"screen_name":"doru_ai","user_id":"770829194"},"id":"503310eb383b80843a00000f"},{"id":"503310eb383b80843a000010","author":{"screen_name":"doru_ai","user_id":"770829194"},"line":13},{"line":13,"author":{"screen_name":"doru_ai","user_id":"770829194"},"id":"503310eb383b80843a000011"},{"id":"503310ec383b80843a000012","author":{"user_id":"770829194","screen_name":"doru_ai"},"line":13},{"line":13,"id":"503310ec383b80843a000013","author":{"user_id":"770829194","screen_name":"doru_ai"}},{"id":"50344e4457c8e4097d000006","author":{"user_id":"23020489","screen_name":"ryun818"},"line":13},{"line":13,"author":{"screen_name":"ryun818","user_id":"23020489"},"id":"50344e4557c8e4097d000007"},{"line":13,"id":"50346d0a9620992e3e000007","author":{"user_id":null,"screen_name":"STAR_ZERO"}},{"line":13,"id":"503476c90f51ad8557000007","author":{"screen_name":"mikakane_info","user_id":"224718639"}},{"line":13,"id":"5035afb8452559503100000d","author":{"screen_name":"sato_ryu","user_id":"5382002"}},{"author":{"screen_name":"sato_ryu","user_id":"5382002"},"id":"5035afb8452559503100000e","line":13},{"line":13,"author":{"screen_name":"sato_ryu","user_id":"5382002"},"id":"5035afb8452559503100000f"},{"id":"50654d64a753b51f3900000f","author":{"user_id":"7032782","screen_name":"RandolphCarter"},"line":13},{"id":"506e9789a753b5ed75000002","author":{"screen_name":"Yas_098","user_id":"225683821"},"line":13},{"line":13,"id":"506fb4dca753b56c17000001","author":{"user_id":"68241290","screen_name":"BlackDogK8"}},{"line":13,"id":"50bb7a223106fe3921000006","author":{"user_id":"704985336","screen_name":"setsumeisabakan"}},{"id":"50bb7a233106fe3921000007","author":{"user_id":"704985336","screen_name":"setsumeisabakan"},"line":13},{"id":"5219b661b2b9fac542000059","author":{"user_id":"288203300","screen_name":"mikecat_mixc"},"line":13},{"id":"52afd6b6657e6eeb27000030","author":{"user_id":"8773312","screen_name":"akimatter"},"line":13},{"line":13,"id":"5513c2c4fe54fe2c4500009c","author":{"screen_name":"417_72ki","user_id":"93344051"}},{"id":"5513c2c3fe54fe2c4500009b","author":{"user_id":"93344051","screen_name":"417_72ki"},"line":13},{"line":13,"author":{"screen_name":"sun_null_ptr","user_id":"156121756"},"id":"59008e9777ff879f68000008"},{"id":"592672b75f30db635b000000","author":{"user_id":"106051119","screen_name":"momimist"},"line":13},{"line":13,"author":{"user_id":"3251628974","screen_name":"Luca_Maud1125"},"id":"592b7ddde8a3617a34000005"},{"id":"5969c1f49da8dbae21000023","author":{"user_id":"2573204216","screen_name":"__MOX__"},"line":13},{"author":{"user_id":"2573204216","screen_name":"__MOX__"},"id":"5969c1f49da8dbae21000024","line":13},{"id":"503058fd943a41d203000025","author":{"user_id":"10327412","screen_name":"tomyuk"},"line":14},{"id":"502d20979251a9c23e000013","author":{"screen_name":"HarpoonArrow","user_id":"325443309"},"line":15},{"author":{"user_id":"10327412","screen_name":"tomyuk"},"id":"50305900943a41d203000026","line":15},{"line":15,"author":{"screen_name":"foolslab","user_id":"2310037477"},"id":"5920164a8e5526a51a00001a"},{"line":15,"author":{"screen_name":"foolslab","user_id":"2310037477"},"id":"592016558e5526a51a00001b"},{"line":15,"id":"592b7de5e8a3617a34000007","author":{"screen_name":"Luca_Maud1125","user_id":"3251628974"}},{"line":16,"author":{"user_id":null,"screen_name":"DsYochibe"},"id":"502bd6c130ed99d02a000002"},{"author":{"user_id":"5728432","screen_name":"nappa"},"id":"502c2dda8948ac0c52000000","line":16},{"author":{"screen_name":"HarpoonArrow","user_id":"325443309"},"id":"502d20989251a9c23e000014","line":16},{"line":16,"id":"502edd0bab0bbf637e000011","author":{"screen_name":"mikecat_mixc","user_id":"288203300"}},{"author":{"user_id":"18315682","screen_name":"token7"},"id":"502f03a3ab0bbf6a3e000032","line":16},{"id":"50305561943a41f044000002","author":{"user_id":"18376369","screen_name":"natsu_nanana"},"line":16},{"line":16,"id":"50305901943a41d203000027","author":{"user_id":"10327412","screen_name":"tomyuk"}},{"line":16,"author":{"screen_name":"tomyuk","user_id":"10327412"},"id":"50305902943a41d203000028"},{"line":16,"id":"5030bb13383b804261000001","author":{"user_id":"5516782","screen_name":"shidocchi"}},{"line":16,"author":{"user_id":"11596312","screen_name":"vikke"},"id":"5030fb9f383b80451c000005"},{"line":16,"id":"5030fba0383b80451c000006","author":{"screen_name":"vikke","user_id":"11596312"}},{"author":{"user_id":"39251911","screen_name":"superbacker"},"id":"50310a04383b80c21a000006","line":16},{"author":{"screen_name":"mather314","user_id":"62148177"},"id":"503249a7383b80240b00000b","line":16},{"author":{"screen_name":"ma3yak","user_id":null},"id":"503489160f51ad0e57000001","line":16},{"line":16,"id":"5035afc54525595031000010","author":{"screen_name":"sato_ryu","user_id":"5382002"}},{"line":16,"author":{"screen_name":"y_u_u_z","user_id":"61203001"},"id":"5035fa954525592f2e000001"},{"id":"50654d6fa753b51f39000010","author":{"user_id":"7032782","screen_name":"RandolphCarter"},"line":16},{"line":16,"author":{"screen_name":"BlackDogK8","user_id":"68241290"},"id":"506fb4e0a753b56c17000002"},{"line":16,"id":"50bb7a2d3106fe3921000008","author":{"screen_name":"setsumeisabakan","user_id":"704985336"}},{"line":16,"author":{"screen_name":"ikumimashiba","user_id":null},"id":"50bc11753106fe231e000002"},{"line":16,"author":{"screen_name":"Miraranran","user_id":"15172612"},"id":"50f0c92cff22d35969000033"},{"author":{"user_id":"288203300","screen_name":"mikecat_mixc"},"id":"5219b663b2b9fac54200005a","line":16},{"line":16,"author":{"screen_name":"mikecat_mixc","user_id":"288203300"},"id":"5219b663b2b9fac54200005b"},{"line":16,"id":"5219b664b2b9fac54200005c","author":{"user_id":"288203300","screen_name":"mikecat_mixc"}},{"author":{"screen_name":"mikecat_mixc","user_id":"288203300"},"id":"5219b664b2b9fac54200005e","line":16},{"line":16,"author":{"screen_name":"mikecat_mixc","user_id":"288203300"},"id":"5219b664b2b9fac54200005d"},{"id":"54db6395fe54fe0075000001","author":{"screen_name":"mather314","user_id":"62148177"},"line":16},{"id":"5513c2c8fe54fe2c4500009d","author":{"screen_name":"417_72ki","user_id":"93344051"},"line":16},{"line":16,"author":{"user_id":"93344051","screen_name":"417_72ki"},"id":"5513c2c8fe54fe2c4500009e"},{"line":16,"id":"592b7de2e8a3617a34000006","author":{"user_id":"3251628974","screen_name":"Luca_Maud1125"}},{"line":16,"author":{"user_id":"2573204216","screen_name":"__MOX__"},"id":"5969c1f69da8dbae21000025"},{"line":16,"author":{"user_id":"2573204216","screen_name":"__MOX__"},"id":"5969c1f69da8dbae21000026"},{"id":"50305903943a41d203000029","author":{"screen_name":"tomyuk","user_id":"10327412"},"line":17},{"line":18,"author":{"user_id":"10327412","screen_name":"tomyuk"},"id":"50305904943a41d20300002a"},{"line":19,"id":"50305906943a41d20300002b","author":{"user_id":"10327412","screen_name":"tomyuk"}},{"line":20,"author":{"screen_name":"sutonea_it","user_id":"498803886"},"id":"502cc1e2844fbbde3e00000b"},{"author":{"screen_name":"tomyuk","user_id":"10327412"},"id":"50305907943a41d20300002c","line":20},{"line":20,"id":"50305908943a41d20300002d","author":{"screen_name":"tomyuk","user_id":"10327412"}},{"line":20,"author":{"user_id":null,"screen_name":"ItSANgo"},"id":"50307486383b807d64000013"},{"author":{"screen_name":"tomyuk","user_id":"10327412"},"id":"50305909943a41d20300002e","line":21},{"line":21,"author":{"user_id":"10327412","screen_name":"tomyuk"},"id":"5030590a943a41d20300002f"},{"line":21,"author":{"screen_name":"ItSANgo","user_id":null},"id":"503073ed383b807d64000012"},{"line":21,"id":"50309a5b383b804624000004","author":{"user_id":null,"screen_name":"eurusd_attacker"}},{"line":21,"id":"50654d73a753b51f39000011","author":{"screen_name":"RandolphCarter","user_id":"7032782"}},{"line":22,"id":"502bd6da30ed99d02a000004","author":{"screen_name":"DsYochibe","user_id":null}},{"author":{"user_id":"498803886","screen_name":"sutonea_it"},"id":"502cc1dc844fbbde3e000009","line":22},{"id":"502edd15ab0bbf637e000012","author":{"user_id":"288203300","screen_name":"mikecat_mixc"},"line":22},{"id":"5030590d943a41d203000030","author":{"user_id":"10327412","screen_name":"tomyuk"},"line":22},{"id":"5030590d943a41d203000031","author":{"screen_name":"tomyuk","user_id":"10327412"},"line":22},{"line":22,"id":"50309a64383b804624000005","author":{"screen_name":"eurusd_attacker","user_id":null}},{"author":{"user_id":"39251911","screen_name":"superbacker"},"id":"50310a11383b80c21a000007","line":22},{"line":22,"author":{"screen_name":"ikumimashiba","user_id":null},"id":"50bc11643106fe231e000001"},{"author":{"screen_name":"mikecat_mixc","user_id":"288203300"},"id":"5219b65bb2b9fac542000056","line":22},{"id":"5219b65cb2b9fac542000057","author":{"user_id":"288203300","screen_name":"mikecat_mixc"},"line":22},{"id":"5219b65cb2b9fac542000058","author":{"screen_name":"mikecat_mixc","user_id":"288203300"},"line":22},{"line":22,"author":{"screen_name":"Takeno_hito","user_id":"817241390442655744"},"id":"5968c4e299356fa00d000011"},{"line":23,"id":"5030590f943a41d203000032","author":{"screen_name":"tomyuk","user_id":"10327412"}},{"id":"50305910943a41d203000033","author":{"screen_name":"tomyuk","user_id":"10327412"},"line":24}]';
+          </script>
+
+          <div class="row-fluid view">
+            <ul class="breadcrumb">
+              <li>
+                <a href="https://unkode-mania.net/">ホーム</a> <span class="divider">/</span>
+              </li>
+              <li>
+                <a href="https://unkode-mania.net/lang/PHP">PHP</a>
+                <span class="divider">/</span>
+              </li>
+              <li class="active">
+                <a href="502bd54330ed99d02a000001.html">データベースに・・・・うわぁぁぁぁぁあ</a>
+              </li>
+            </ul>
+
+
+            <div class="property">
+              <a href="https://twitter.com/intent/user?screen_name=m2wasabi">
+                m2wasabi
+              </a>
+              2012-08-15 16:58:43
+            </div>
+            <h2 class="title">
+              [PHP]
+              データベースに・・・・うわぁぁぁぁぁあ
+              <a href="https://b.hatena.ne.jp/entry/https://unkode-mania.net/view/502bd54330ed99d02a000001" class="hatena-bookmark-button" data-hatena-bookmark-title="[PHP] データベースに・・・・うわぁぁぁぁぁあ - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/502bd54330ed99d02a000001" data-text="[PHP] データベースに・・・・うわぁぁぁぁぁあ - ウンコード・マニア" data-hashtags="unkode"></a>
+            </h2>
+
+            <h3 class="clear">投稿者からのアピールポイント</h3>
+            <div class="markdown"><p>例外って何だろう。SQLってなんだろう。エラーとは。そして帰ってこない関数。
+先人の知恵をすべて無に返す実装。</p>
+</div>
+            <pre class="prettyprint linenums">// DBに接続
+$pdo = new PDO($dsn,$user,$password);
+
+$id = $_POST[&#39;id&#39;];
+
+$data = getHogeData($pdo,$id);
+
+$smarty-&gt;assign(&#39;data&#39;,$data);
+$smarty-&gt;display();
+
+function getHogeData(&amp;$pdo,$id){
+	try {
+		// データの取得
+		$sql = &quot;SELECT * FROM hoge&quot;;
+		$stmt = $pdo-&gt;query($sql);
+		while($data = $stmt-&gt;fetch()){
+			if($data[&#39;id&#39;] == $id){
+				return $data;
+			}
+		}
+	} catch(exception $e){
+		user_error(&#39;入力内容が不正です&#39;);
+		exit;
+	}
+}</pre>
+            <p class="description">使い方ヒント: 「これは臭う」という行を見付けたら、各行の<img src="../img/nuclear.png" alt="smell" title="臭いアイコン" />をクリックしてマーキングしておきましょう(要Twitter OAuth認証)</p>
+
+          <div class="ad ad-amazon">
+<a href="https://www.amazon.co.jp/%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9-%E4%BD%BF%E3%81%84%E6%96%B9-Vladimir-Khorikov/dp/4839981728?keywords=%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9&qid=1677933953&sr=8-1&linkCode=li2&tag=smeghead-22&linkId=b847943bc8c2808f65e6b16a0d38ccba&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4839981728&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4839981728" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E7%8F%BE%E5%A0%B4%E3%81%A7%E5%BD%B9%E7%AB%8B%E3%81%A4%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E8%A8%AD%E8%A8%88%E3%81%AE%E5%8E%9F%E5%89%87-%E5%A4%89%E6%9B%B4%E3%82%92%E6%A5%BD%E3%81%A7%E5%AE%89%E5%85%A8%E3%81%AB%E3%81%99%E3%82%8B%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%81%AE%E5%AE%9F%E8%B7%B5%E6%8A%80%E6%B3%95-%E5%A2%97%E7%94%B0-%E4%BA%A8/dp/477419087X?keywords=%E7%8F%BE%E5%A0%B4%E3%81%A7%E5%BD%B9%E7%AB%8B%E3%81%A4%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E8%A8%AD%E8%A8%88%E3%81%AE%E5%8E%9F%E5%89%87&qid=1677934081&sprefix=%E7%8F%BE%E5%A0%B4%E3%81%A7%2Caps%2C327&sr=8-1&linkCode=li2&tag=smeghead-22&linkId=de5d4d5fbee5208ab924bc96b1a18cb9&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=477419087X&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=477419087X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E8%89%AF%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89-%E6%82%AA%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A7%E5%AD%A6%E3%81%B6%E8%A8%AD%E8%A8%88%E5%85%A5%E9%96%80-%E2%80%95%E4%BF%9D%E5%AE%88%E3%81%97%E3%82%84%E3%81%99%E3%81%84-%E6%88%90%E9%95%B7%E3%81%97%E7%B6%9A%E3%81%91%E3%82%8B%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9-%E4%BB%99%E5%A1%B2/dp/4297127830?pd_rd_w=vAOIq&content-id=amzn1.sym.918446e7-72f4-48c7-a672-af3b6ace2b19&pf_rd_p=918446e7-72f4-48c7-a672-af3b6ace2b19&pf_rd_r=A8PMS73FFR5MCF1QEVV8&pd_rd_wg=c0VXY&pd_rd_r=7be1889d-92c4-471f-a0fd-68fa78a337af&pd_rd_i=4297127830&psc=1&linkCode=li2&tag=smeghead-22&linkId=f9ef7d2d4144f269731fe0c68333bd98&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4297127830&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4297127830" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/Good-Code-Bad-%EF%BD%9E%E6%8C%81%E7%B6%9A%E5%8F%AF%E8%83%BD%E3%81%AA%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E7%9A%84%E6%80%9D%E8%80%83/dp/4798068160?keywords=%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9&qid=1677933953&sr=8-18&linkCode=li2&tag=smeghead-22&linkId=ec8f84fa8dd945ea9c259bd875bbb8f9&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4798068160&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4798068160" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%BB%E3%83%90%E3%82%A4%E3%83%BB%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3-Dan-Bergh-Johnsson/dp/483997599X?keywords=%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%E3%83%90%E3%82%A4%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3&qid=1677934293&sprefix=%E3%82%BB%E3%82%AD%E3%83%A5%E3%82%A2%2Caps%2C223&sr=8-1&linkCode=li2&tag=smeghead-22&linkId=c56dc733fc9a1de040e77b1811d2c3e2&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=483997599X&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=483997599X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E3%81%A1%E3%82%87%E3%81%86%E3%81%9C%E3%81%A4%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%AD%E8%A8%88%E5%85%A5%E9%96%80%E2%80%95%E2%80%95PHP%E3%81%A7%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%81%AE%E6%B4%BB%E7%94%A8-%E7%94%B0%E4%B8%AD-%E3%81%B2%E3%81%95%E3%81%A6%E3%82%8B/dp/4297132346?crid=1MZ9RQR460YAL&keywords=%E3%81%A1%E3%82%87%E3%81%86%E3%81%9C%E3%81%A4%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%AD%E8%A8%88%E5%85%A5%E9%96%80&qid=1677934394&sprefix=%E3%81%A1%E3%82%87%E3%81%86%E3%81%9C%E3%81%A4%2Caps%2C217&sr=8-1&linkCode=li2&tag=smeghead-22&linkId=2eddfb4c3f23b4019e5e8c94b0b99f0d&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4297132346&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4297132346" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E6%96%B0%E7%89%88-C%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%BA%E6%96%AD%E5%AE%A4-%E8%97%A4%E5%8E%9F-%E5%8D%9A%E6%96%87/dp/4774117870?&linkCode=li2&tag=smeghead-22&linkId=ad7a413e6dbdd3b0fb5f803e838e9226&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4774117870&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=smeghead-22&amp;language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=smeghead-22&language=ja_JP&l=li2&o=9&a=4774117870" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+          </div>
+            <h3>コメント(10)</h3>
+              <div class="comment-block" id="comment-502c4cb48948ac7538000003">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_502c4cb48948ac7538000003">#1</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=math_neko">
+                    math_neko
+                  </a>
+                  2012-08-16 01:28:20
+                  <a name="comment_502c4cb48948ac7538000003" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>なまじ SQL に詳しくてクソ長い SQL 文になってるのは見たことあるがこれもこれで酷い</p>
+</div>
+              </div>
+              <div class="comment-block" id="comment-502c6fb28948acf809000003">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_502c6fb28948acf809000003">#2</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=cubmaru">
+                    cubmaru
+                  </a>
+                  2012-08-16 03:57:38
+                  <a name="comment_502c6fb28948acf809000003" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>これ負荷テストの内容によっては通っちゃいますよね、その点でも破壊力が大きい</p>
+</div>
+              </div>
+              <div class="comment-block" id="comment-502d27399251a9647f00000c">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_502d27399251a9647f00000c">#3</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=HarpoonArrow">
+                    HarpoonArrow
+                  </a>
+                  2012-08-16 17:00:41
+                  <a name="comment_502d27399251a9647f00000c" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>なんかじわじわきた</p>
+</div>
+              </div>
+              <div class="comment-block" id="comment-50305600943a41f044000005">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_50305600943a41f044000005">#4</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=kxyz_0x9a">
+                    kxyz_0x9a
+                  </a>
+                  2012-08-19 02:57:04
+                  <a name="comment_50305600943a41f044000005" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>7〜8年前にコボラーのオッサンが書いたソースをメンテした事があったが基本このスタイルだった</p>
+</div>
+              </div>
+              <div class="comment-block" id="comment-5030cee2383b801a5f000000">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_5030cee2383b801a5f000000">#5</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=fshin2000">
+                    fshin2000
+                  </a>
+                  2012-08-19 11:32:50
+                  <a name="comment_5030cee2383b801a5f000000" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>これ熱いなー。user_errorメソッドの自在ぶりも。</p>
+</div>
+              </div>
+              <div class="comment-block" id="comment-5030dc9d383b803b2100000b">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_5030dc9d383b803b2100000b">#6</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=uncle_istvan">
+                    uncle_istvan
+                  </a>
+                  2012-08-19 12:31:25
+                  <a name="comment_5030dc9d383b803b2100000b" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>もともとファイルを行で探索するコードをDBに転用しましたって感じがする。例外処理は・・・ヒット前提なのかな</p>
+</div>
+              </div>
+              <div class="comment-block" id="comment-5031c0b0383b802715000002">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_5031c0b0383b802715000002">#7</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=m_shige1979">
+                    m_shige1979
+                  </a>
+                  2012-08-20 04:44:32
+                  <a name="comment_5031c0b0383b802715000002" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>うんこれはひどい</p>
+</div>
+              </div>
+              <div class="comment-block" id="comment-50324718383b80240b000006">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_50324718383b80240b000006">#8</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=gradou2">
+                    gradou2
+                  </a>
+                  2012-08-20 14:18:00
+                  <a name="comment_50324718383b80240b000006" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>WHERE「・・・。」</p>
+</div>
+              </div>
+              <div class="comment-block" id="comment-506fb56ba753b56c17000003">
+                <div class="comment-header">
+                  <span class="comment-counter right">
+                    <a href="502bd54330ed99d02a000001.html#comment_506fb56ba753b56c17000003">#10</a>
+                  </span>
+                  <a href="https://twitter.com/intent/user?screen_name=BlackDogK8">
+                    BlackDogK8
+                  </a>
+                  2012-10-06 04:36:59
+                  <a name="comment_506fb56ba753b56c17000003" class="comment-anchor">&nbsp;</a>
+                </div>
+                <p class="clear" />
+                <div class="markdown"><p>これはコボラーの仕業ですな。
+10年程前だったかコボラーのおっさんに、同じ様なコード書けって言われた。</p>
+</div>
+              </div>
+              <p>コメント投稿には、twitter認証が必要です。</p>
+              <a href="https://unkode-mania.net/auth" class="btn btn-primary">Twitter認証</a>
+
+            <hr/>
+            <div class="neighborhoods-navi">
+
+                <a class="btn btn-inverse" href="https://unkode-mania.net/lang/PHP">&laquo; PHP一覧に戻る</a>
+              <br class="clear"/>
+            </div>
+
+            <div class="modal hide" id="modal-remove-smell">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>ウンコの削除</h3>
+              </div>
+              <div class="modal-body">
+                <p>あなたが付けたウンコなので削除することができます。</p>
+                <p>ウンコを削除しますか？</p>
+              </div>
+              <div class="modal-footer">
+                <a href="502bd54330ed99d02a000001.html#" class="btn btn-danger" id="remove-smell">削除</a>
+                <a href="502bd54330ed99d02a000001.html#" class="btn" data-dismiss="modal">閉じる</a>
+              </div>
+            </div>
+            <div class="modal hide" id="modal-remove-comment">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>コメントの削除</h3>
+              </div>
+              <div class="modal-body">
+                <p>あなたが投稿したコメントなので削除することができます。</p>
+                <p>コメントを削除しますか？</p>
+              </div>
+              <div class="modal-footer">
+                <a href="502bd54330ed99d02a000001.html#" class="btn btn-danger" id="remove-comment">削除</a>
+                <a href="502bd54330ed99d02a000001.html#" class="btn" data-dismiss="modal">閉じる</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- recommends -->
+            <h3>このウンコードに臭った人は、こちらのウンコードにも臭ってます</h3>
+            <div class="row-fluid">
+              
+                <div class="span4 unko-element">
+                  <h3>
+                    <a class="title" href="50a1018a61fd523468000000.html">
+                      [Java]
+                      is禁止令
+                    </a>
+                  </h3>
+                  <div class="property">
+                    <a href="https://b.hatena.ne.jp/entry/https://unkode-mania.net/view/50a1018a61fd523468000000" class="hatena-bookmark-button" data-hatena-bookmark-title="[Java] is禁止令 - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/50a1018a61fd523468000000" data-text="[Java] is禁止令 - ウンコード・マニア" data-hashtags="unkode"></a>
+                  </div>
+                  <div class="markdown clear"><p>ウンコードの趣旨とは違い、レビューで指摘...</p>
+</div>
+                  <pre class="prettyprint">// Mod yamada Start
+
+// 一般的に考えて真偽値を返すメ...</pre>
+                  <p class="more"><a class="btn btn-primary view-link" href="50a1018a61fd523468000000.html">鑑賞する &raquo;</a></p>
+                </div><!--/span-->
+              
+                <div class="span4 unko-element">
+                  <h3>
+                    <a class="title" href="5029e1a9eef2c7f861000008.html">
+                      [Java]
+                      内部的にunicodeだから日本語つかえ...
+                    </a>
+                  </h3>
+                  <div class="property">
+                    <a href="https://b.hatena.ne.jp/entry/https://unkode-mania.net/view/5029e1a9eef2c7f861000008" class="hatena-bookmark-button" data-hatena-bookmark-title="[Java] 内部的にunicodeだから日本語つかえるけど・・・いくら英語苦手だからって・・・ - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/5029e1a9eef2c7f861000008" data-text="[Java] 内部的にunicodeだから日本語つかえるけど・・・いくら英語苦手だからって・・・ - ウンコード・マニア" data-hashtags="unkode"></a>
+                  </div>
+                  <div class="markdown clear"><p>これを書いた先輩に「英語で書きましょうよ...</p>
+</div>
+                  <pre class="prettyprint">class 会員 {
+    private int 会員番号;
+    p...</pre>
+                  <p class="more"><a class="btn btn-primary view-link" href="5029e1a9eef2c7f861000008.html">鑑賞する &raquo;</a></p>
+                </div><!--/span-->
+              
+                <div class="span4 unko-element">
+                  <h3>
+                    <a class="title" href="5040f47b9b6066a52e000003.html">
+                      [Java]
+                      フルHD推奨。
+                    </a>
+                  </h3>
+                  <div class="property">
+                    <a href="https://b.hatena.ne.jp/entry/https://unkode-mania.net/view/5040f47b9b6066a52e000003" class="hatena-bookmark-button" data-hatena-bookmark-title="[Java] フルHD推奨。 - ウンコード・マニア" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://unkode-mania.net/view/5040f47b9b6066a52e000003" data-text="[Java] フルHD推奨。 - ウンコード・マニア" data-hashtags="unkode"></a>
+                  </div>
+                  <div class="markdown clear"><p>画面の左側がわりと無駄な気がします。</p>
+</div>
+                  <pre class="prettyprint">public int hoge(){
+    int result = 0;...</pre>
+                  <p class="more"><a class="btn btn-primary view-link" href="5040f47b9b6066a52e000003.html">鑑賞する &raquo;</a></p>
+                </div><!--/span-->
+              
+            </div><!--/row-->
+
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+
+
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; smeghead 2012 - 2021</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <form id="signout-form" action="https://unkode-mania.net/signout" method="post"></form>
+
+    <div class="modal hide" id="needs-auth-modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Twitter認証が必要です</h3>
+      </div>
+      <div class="modal-body">
+        <p>この操作をするためにはTwitter認証が必要です。</p>
+        <p>Twitter認証をすれば、コード投稿をしたりコメントしたりsmellボタンを使えるようになります。</p>
+      </div>
+      <div class="modal-footer">
+        <a href="https://unkode-mania.net/auth" class="btn btn-primary">Twitter認証</a>
+        <a href="502bd54330ed99d02a000001.html#" class="btn" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/app.js"></script>
+
+    <div class="modal hide" id="modal-rss">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>RSSフィード</h3>
+      </div>
+      <div class="modal-body">
+        <p>新着ウンコードと新着コメントのRSSフィードは、Twitterのtweet rssをご利用ください。</p>
+        <textarea id="rss-feed" class="uneditable-input">https://unkode-mania.net/rss</textarea>
+      </div>
+      <div class="modal-footer">
+        <a href="502bd54330ed99d02a000001.html#" class="btn" data-dismiss="modal">閉じる</a>
+      </div>
+  </body>
+</html>
